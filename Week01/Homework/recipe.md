@@ -1,5 +1,5 @@
 # Crispy Pork Belly
-Delicious, if you ignore the cholesterol.
+Some of the best Chinese food delicacies, if you ignore the cholesterol level.
 
 ## Ingredient List
 - A strip of pork belly with skin-on
@@ -12,7 +12,7 @@ Delicious, if you ignore the cholesterol.
 - 1 egg white beaten
 - 1 tbsp white vinegar
 
-## Directions
+## Instructions
 1. Dry the pork belly with the skin exposed in the fridge for at least 24 hours
 2. Pat the pork belly skin dry and poke holes all across the skin. 
 3. Cut 1/2" cuts lengthwise across the pork belly. In a small bowl, mix salt, white papper, five spice powder, sugar, and shaoxing wine to make a paste. Evenly spread the paste on the meat side of the pork and crevices, don't touch the skin.
