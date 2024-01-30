@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form Elements</title>
+  </head>
+  <body>
+    <p>
+        Here is a form containing basic input types. For more infromation see
+        <a href = "https://www.youtube.com/" target="_blank" >YTB</a>
+        <!--The form action usually contains a file to process the form data, it could be local like contact.php
+        or it could be to a third party API.-->
+        <form action = "#" method = "POST" name = "sampleForm" target = "_self">
+            <fieldset>
+                <legend>Simple Text Input</legend>
+                <p>
+                    The box and the title are created by using the fieldset and legend tags.
+                </p>
+                <!--FirstName variable ties the label and input together for accessibility-->
+                <label for = "FirstName">First Name</label>
+                <input name = "FirstName" type="text" placeholder="First Name" maxLength=15/>
+                <p>This text input has a max character length and placeholder text.</p>
+                <label for="LastName">Last Name</label>
+                <input name="LastName" type="text" placeholder="Last Name" maxLength=15/>
+                <br/>
+                <label for="age">Your Age</label>
+                <input name="age" type="number" min="0" max="100"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Text Area Tag</legend>
+                <label for="WhyIDM">Why did you apply to IDM?</label>
+                <!--Text Areas are great for long texts and paragraphs-->
+                <textarea name="WhyIDM" cols="50" rows="10"></textarea>
+                
+            </fieldset>
+
+            <fieldset><legend>Check Boxes</legend>
+                <p>
+                    Check boxes allow the user to select more than one option at once.
+                    Checkboxes in the same group (the name) have the same name, but different values.
+                </p>
+                <label for="Pet">What pets do you have?</label>
+                <br/>
+                <input type="checkbox" name="Pet" value="Dog"/> Dog
+                <br/>
+                <input type="checkbox" name="Pet" value="Cat"/> Cat
+                <br/>
+                <input type="checkbox" name="Pet" value="Snake"/> Snake
+                <br/>
+                <input type="checkbox" name="Pet" value="Chicken"/> Chicken
+            </fieldset>
+
+            <fieldset><legend>Radio Buttons</legend>
+                <p>
+                    Radio Buttons only allows one option per group (the name)
+                    Radio Buttons in the same group have the same name, but different values.
+                </p>
+                <label for="Pet">Which pet is your favorite?</label>
+                <br/>
+                <input type="radio" name="Pet" value="Dog"/> Dog
+                <br/>
+                <input type="radio" name="Pet" value="Cat"/> Cat
+                <br/>
+                <input type="radio" name="Pet" value="Snake"/> Snake
+                <br/>
+                <input type="radio" name="Pet" value="Chicken"/> Chicken
+            </fieldset>
+            
+            <fieldset><legend>Select/Options</legend>
+                <p>
+                    Using the select and option tags, you can add items to a dropdown menu.
+                </p>
+                <label for="State">Pick a State!</label>
+                <br/>
+                <select name="State">
+                    <option value="NH">New Hampshire</option>
+                    <option value="NY">New York</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NJ">New Jersey</option>
+                </select>
+            </fieldset>
+            <p> Finally, we use a button to submit our form</p>
+            <input name="Submit" value="Submit" type="button"/>
+            <button role="button">Contact us!</button>
+        </form>
+    </p>
+  </body>
+</html>
