@@ -14,4 +14,4 @@ I personally prefer Figma it's used a lot in the UX industry. I'm more familiar 
 https://www.figma.com/proto/2dWFuHBr85OWTFQcRFiPLu/Untitled?page-id=0%3A1&type=design&node-id=0-1&viewport=1069%2C359%2C0.96&t=HqdnV8zYvkeJWs20-1&scaling=min-zoom&mode=design
 
 Preview:
-![Image](wireframe01.png)
+![Image](../Homework/imgs//wireframe01.png)
