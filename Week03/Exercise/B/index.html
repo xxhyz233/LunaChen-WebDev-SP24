@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intro to CSS Text and Spans</title>
+    <!--Declaring CSS style in html-->
+    <style type="text/CSS">
+      /* universal selector to zero out default margins or padding */
+      * {
+        margin: 6pt;
+        padding: 0;
+      }
+      /* tag selector applies to every instance of that tag on the page */
+      p {
+        /* 1rem = 16px */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
+        color: #f50;
+        /* #f50 same as #ff5500 */
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      a {
+        color: #f00;
+        text-decoration: none;
+      }
+      /*Declaring Class selector starts with .*/
+      .silly_text {
+        font-family: fantasy;
+        /* you can only choose from the font weight your font supports */
+        /* font-weight: 800; */
+        text-decoration: underline;
+      }
+
+      .indented {
+        text-indent: 20%;
+      }
+
+      .align_right {
+        text-align: right;
+      }
+
+      .align_justified {
+        text-align: justify;
+      }
+      /*Declaring ID selector starts with #*/
+      #really_important {
+        font-weight: 600;
+        font-size: x-large;
+        font-style: oblique;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin: 10px 20px; color: blueviolet">
+      Heading 1 Displays Block
+    </h1>
+    <p class="align_right">
+      <!--<span class = "css tag selector">text</span> to add tag-->
+      <span class="silly_text">Lorem ipsum dolor sit amet,</span> consectetur
+      adipiscing elit. Vestibulum quis justo porta, ultricies sem suscipit,
+      hendrerit metus. Nunc aliquam tellus eu tincidunt rhoncus. Mauris rhoncus
+      risus nec venenatis ultrices.
+      <span class="silly_text"
+        >Vestibulum blandit laoreet enim, a aliquam neque tempor sit amet.</span
+      >
+      Duis varius metus vitae felis maximus sagittis. Curabitur vehicula
+      vestibulum felis et posuere. Donec scelerisque volutpat luctus.
+    </p>
+    <!--ID element applies to only ONE element on the page while Class can apply to any tag-->
+    <p id="really_important" class="align_justified">
+      Vivamus laoreet, eros quis tincidunt aliquam, orci nisl egestas lacus, sit
+      amet eleifend dolor leo ultricies enim. Nunc mauris neque, iaculis in
+      ullamcorper feugiat, rhoncus et mauris. Aenean sem sem, congue vel
+      fringilla sed, ultrices rutrum purus. Phasellus luctus quam ut placerat
+      sagittis. <a href="#">Mauris vitae faucibus quam</a>, sit amet accumsan
+      magna. Cras nec tempus ligula. Pellentesque a semper arcu.
+    </p>
+    <p class="indented">
+      Maecenas a nulla et nisi tristique ultricies. Etiam ut justo lacus. Duis
+      eu mauris eu mi finibus efficitur sed vel elit. Aenean vitae varius urna.
+      Nulla maximus tincidunt ipsum, a viverra nibh. Aliquam faucibus metus id
+      ante ullamcorper fermentum. Sed laoreet ipsum erat, ut scelerisque tortor
+      dignissim sed. Etiam maximus mi nulla, efficitur volutpat urna tincidunt
+      eu. Praesent ut ligula libero.
+    </p>
+  </body>
+</html>
