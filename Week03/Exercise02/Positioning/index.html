@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Positioning Baisc</title>
+        <link rel="stylesheet" href="./CSS/styles.css"/>
+    </head>
+    <!--Using external style sheet as reference, but internal style sheet ALWAYS replaces external ones-->
+    <body>
+        <header>
+            <h1>This would be where a fixed navigation would live?</h1>
+        </header>
+        
+        <div class="abs-no-parent">
+            <p>This div has no parent, and is absolutely positioned</p>
+        </div>
+
+        <div class="rel-parent">
+            <p> This div is a relatively positioned parent</p>
+            <div class="abs-rel-parent">
+                <p>This div is absolutely positioned inside of a relatively positioned parent.</p>
+            </div>
+        </div>
+    </body>
+</html>

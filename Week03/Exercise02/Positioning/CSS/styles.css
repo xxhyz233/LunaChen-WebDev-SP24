@@ -1,0 +1,50 @@
+/*Hierarchy and position: relative/absolute/fixed is crucial to positioning elements */
+
+/*Select all tags called html and body and set margin as 0, useful for webpages with images */
+html,  body{
+    margin: 0;
+}
+
+/* The invisible div now has styling to them, use att solid: useful for creating boxes*/
+div{
+    border: 1px solid red;
+    padding: 10px;
+}
+
+/* Styling for the div class*/
+.abs-no-parent{
+    background-color: cornflowerblue;
+    /*Absolute position just like in p5js, att: both % or unit is relative to the browser window,
+     useful for sticky logos and boxes */
+    position: absolute;
+    top: 20%;
+    right: 100px;
+}
+
+.rel-parent{
+    background-color: blueviolet;
+    width: 50%;
+    /* 100vh: 100% of Viewport Height, useful for scrolling*/
+    height: 100vh;
+    position: relative;
+}
+
+.abs-rel-parent{
+    background-color: violet;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+header{
+    background-color: orangered;
+    height: 100px;
+    width: 100%;
+    /*fixed position completely ignores margins, other elements etc...
+    and is fixed in place */
+    position: fixed;
+    /* Higher z-index: Foreground layer, Negative z-index: Background*/
+    z-index: 100;
+}

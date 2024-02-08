@@ -1,0 +1,88 @@
+<html lang="en">
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Dropdown Menu Nested UL</title>
+        <style type="text/css">
+            body{
+                /*font-family chooses the last font when previous fonts are all unavailable */
+                font-family:'Courier New', Courier, monospace;
+                padding: 20px 50px 150px;
+                font-size: 13px;
+                text-align: center;
+                background-color: rgba(0, 0, 255, 0.1);
+            }
+
+            ul{
+                /* display: inline: Aligns the ul dots back to the center */
+                display: inline;
+                margin: 0;
+                padding: 15px 4px 17px 0;
+                list-style-type: none;
+                box-shadow: 0, 0, 5px, rgba(0,0,0,0.15);
+            }
+
+            ul li{
+                /* 12px/18px, 12px OR 18px*/
+                font: bold 12pt/18pt sans-serif;
+                display: inline-block;
+                position: relative;
+                padding: 15px 20px;
+                background: #fff;
+                cursor: pointer;
+                /* Fade transition of all att for 0.2s for all ul li items*/
+                transition: all 0.2s;
+            }
+            /* Selector for hover behavior */
+            ul li:hover{
+                background-color: #555;
+                color: #fff;
+            }
+            /* drop down items */
+            ul li ul{
+                padding: 0;
+                position: absolute;
+                top: 48px;
+                left:0;
+                width: 150px;
+                /* Overwrite the parent's style */
+                box-shadow: none;
+                display: none;
+                visibility: none;
+                transition: opacity 0.9s;
+            }
+
+            ul li ul li{
+                background: #555;
+                display: block;
+                color: #fff;
+                text-shadow: 0 -1px 0 #000;
+            }
+            ul li ul li:hover{
+                background: #666;
+
+            }
+            /* Only when we hover over the first li, for the ul inside: */
+            ul li:hover ul{
+                display:block;
+                opacity: 1;
+                visibility: visible;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Portfolio
+                <ul>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>Photography</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </body>
+</html>
