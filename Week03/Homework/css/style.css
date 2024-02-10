@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #fff;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 12pt;
+    
+}
+.instructions{
+    font-family: 'Inter', sans-serif;
+    font-size: 16pt;
+}
+
+a{
+
+}
+
+h1{
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-size: 48pt;
+}
+h2{
+    font-family: "Inter", serif;
+    font-weight:bold;
+    font-size: 24pt;
+}
+h3{
+    font-family: "Inter", sans-serif;
+    font-size: 16pt;
+    font-weight:normal;
+}
+
+nav ul{
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+}
+header {
+    position: fixed;
+    top:20px;
+    
+}
+footer{
+    position: fixed;
+    bottom: 10px;
+}
+
+.bigContainer{
+    margin: 10vh 10vw;
+}
+
+.leftContainer{
+    width: 30%;
+    height: 100%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: left;
+}
+.leftFloat{
+    position: relative;
+    top: 10px;
+}
+.leftFloat ul li{
+    padding-bottom: 10px;
+}
+
+.polaroid img{
+    width: 352px;
+    height: 441px;
+    object-fit: cover;
+}
+
+.nutrList ul li{
+    display:inline-block;
+    padding: 10px;
+}
+
+.instructions ol li{
+    padding-bottom: 40px;
+}
