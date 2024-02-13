@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background: #fff;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 12pt;
+    
+}
+.instructions{
+    font-family: 'Inter', sans-serif;
+    font-size: 16pt;
+}
+
+
+
+h1{
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-size: 48pt;
+}
+h2{
+    font-family: "Inter", serif;
+    font-weight:bold;
+    font-size: 24pt;
+}
+h3{
+    font-family: "Inter", sans-serif;
+    font-size: 16pt;
+    font-weight:normal;
+}
+
+header {
+    width: 80%;
+    padding: 0 10%;
+    height: 50px;
+    overflow-y: hidden;
+    position: fixed;
+    margin-bottom: 10px;
+    z-index: 10;
+    background-color: lightgray;
+    /* flex container properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: all 0.2s;
+}
+header a:hover{
+    /*Invert color */
+    background-color: rgba(40, 40, 40, 0.5);
+    color:white;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+nav li{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 10px;
+}
+
+.bigContainer{
+    margin: 10vh 10vw;
+}
+
+.leftContainer{
+    width: 30%;
+    height: 100%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: left;
+}
+.leftFloat{
+    position: relative;
+    top: 10px;
+}
+.leftFloat ul li{
+    padding-bottom: 10px;
+}
+
+.polaroid img{
+    width: 352px;
+    height: 441px;
+    object-fit: cover;
+}
+
+.nutrList ul li{
+    display:inline-block;
+    padding: 10px;
+}
+
+.instructions ol li{
+    padding-bottom: 40px;
+}
