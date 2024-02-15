@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+    width: 100%;
+    /*Keeps the aspect ratio*/
+    height: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../img/grey_wash_wall.png');
+    padding: 0 2rem;
+    position: relative;
+}
+
+.brand {
+    margin: 0;
+    font-weight: 300;
+}
+
+header a{
+    color: #aaa;
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    min-width: 5rem;
+    text-align: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 1rem;
+}
+
+.menu li a:hover {
+    color: #EEE;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Wrap or No-Wrap */
+    flex-wrap: wrap;
+}
+
+.thumb {
+    /* Size of the flex grid */
+    flex: 0 0 23%;
+    margin: 2rem auto;
+}
+
+/* Tablet Sized Screen */
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    body {
+        background-color: blue;
+    }
+
+    .thumb {
+        flex: 0 0 45%;
+        margin: 1rem auto;
+    }
+}
+
+/* Phone Sized Screen */
+@media screen and (max-width: 768px) {
+    body {
+        background: green;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+    }
+
+    .brand {
+        margin: 0.5rem;
+    }
+
+    .mobile-menu {
+        display: block;
+        color: #AAA;
+        font-size: 2rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    /* Typical override for flex items on mobiles */
+    .thumb {
+        flex: 1 1 100%;
+        margin: 1rem auto;
+    }
+}

@@ -11,6 +11,7 @@
     4. Google Font import (Inter, Courier fonts...)
     5. Transitions for hover, click...
     6. Color filters: Saturation
+    7. Media Queries
 
 - Skills to learn
     - Managing different pages 
