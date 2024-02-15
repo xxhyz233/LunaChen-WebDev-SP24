@@ -18,9 +18,7 @@ body{
     font-size: 16pt;
 }
 
-a{
 
-}
 
 h1{
     font-family: "Inria Serif", serif;
@@ -38,19 +36,45 @@ h3{
     font-weight:normal;
 }
 
-nav ul{
-    display: inline;
-    list-style-type: none;
-    text-align: center;
-}
-nav ul li{
-    display: inline-block;
-}
 header {
+    width: 80%;
+    padding: 0 10%;
+    height: 50px;
+    overflow-y: hidden;
     position: fixed;
-    top:20px;
+    margin-bottom: 10px;
+    z-index: 10;
+    background-color: lightgray;
+    /* flex container properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: all 0.2s;
+}
+header a:hover{
+    /*Invert color */
+    background-color: rgba(40, 40, 40, 0.5);
+    color:white;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
     
 }
+nav li{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+}
+
+
 footer{
     position: fixed;
     bottom: 10px;
