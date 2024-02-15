@@ -1,4 +1,5 @@
 # Midterm Project Ideation
+https://docs.google.com/presentation/d/1eVNPpyhdA32PWL1hUAVYOBVKC0CMfSpw1ONMGiKI5Ds/edit?usp=sharing
 - Concept: My personal portfolio website
 - Inspiration: 
     - https://refikanadol.com
@@ -19,3 +20,4 @@
     - Grid and Columns layout
     - Embedding Vimeo and YouTube videos
     - More control with Text blocks, alignment, and justifications
+    - Scroll behavior transition
