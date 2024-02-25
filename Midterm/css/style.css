@@ -1,0 +1,137 @@
+/* font-family: "Inter", sans-serif; */
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+}
+
+/* Fonts and Icons */
+.icons {
+    fill: white;
+    padding:0px 10px;
+}
+
+
+.navText {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Header and Navbar */
+header {
+    padding:50px 0px;
+    padding-bottom:0px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+header a {
+    padding: 10px;
+    text-decoration: none;
+    color:white;
+    transition: all 0.2s ease-in-out;
+}
+
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+header h1 a {
+    padding: 0px;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 200;
+}
+
+header h1 a:hover {
+    background-color: white;
+    color: black;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 160px;
+    width: 100%vw;
+
+    list-style: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+/* Flexbox stuff 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding: 0px 160px;
+    min-height: 400px;
+}
+
+
+.item {
+    padding:40px 0px;
+    border: 1px solid cornflowerblue;
+    background-color: rgba(0, 0, 255, 0.3);
+    width: 23%;
+    min-width:auto;
+    height: auto;
+
+}
+*/
+
+/* Create four equal columns inside a row that sits next to each other */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 150px;
+    padding-top: 120px;
+}
+
+.column {
+    flex: 24.5%;
+    max-width: 24.5%;
+}
+
+.item {
+    padding: 8px;
+    vertical-align: middle;
+    width: 97%;
+    transition: all 0.2s;
+}
+
+.item:hover {
+
+}
+
+/* Footer */
+footer{
+    padding: 50px 0px;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:center;
+    list-style: none;
+}
