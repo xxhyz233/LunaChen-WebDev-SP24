@@ -24,19 +24,43 @@ body {
 }
 
 /* Header and Navbar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
 header {
-    padding:50px 0px;
-    padding-bottom:0px;
+    z-index: 999;
+    padding: 3vh 0px;
+    padding-bottom: 0;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
 
+header nav {
+    padding: 0px 6vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    list-style: none;
+}
+
 header a {
-    padding: 10px;
+    padding: 1vw;
     text-decoration: none;
     color:white;
     transition: all 0.2s ease-in-out;
 }
+
+
 
 header a:hover {
     background-color: white;
@@ -55,25 +79,7 @@ header h1 a:hover {
     color: black;
 }
 
-header ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 160px;
-    width: 100%vw;
-
-    list-style: none;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-/* Flexbox stuff 
+/* Organized using Flexbox 
 .container {
     display: flex;
     flex-direction: row;
@@ -102,7 +108,7 @@ header ul{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 150px;
+    padding: 0 6vw;
     padding-top: 120px;
 }
 
@@ -112,19 +118,41 @@ header ul{
 }
 
 .item {
-    padding: 8px;
+    padding: 6px;
     vertical-align: middle;
-    width: 97%;
-    transition: all 0.2s;
+    width: 100%;
+    transition: all 0.1s ease-in-out;
 }
 
 .item:hover {
+    transform: scale(1.1);
+    background-color: purple;
+    background-size: 20px 20px;
+    opacity: 100;
+    cursor:zoom-in;
+}
 
+.item:active {
+    z-index: 9999;
+    top: 0;
+    backdrop-filter: blur(10px);
+
+    min-height: 100%;
+    position: fixed;
+    width: auto;
+    height: auto;
+    max-height: 1024px;
+    
+    padding: 10px;
+    transition: all .15s linear;
+    background: #cc0000;
+    background-size: 100%;
+    
 }
 
 /* Footer */
-footer{
-    padding: 50px 0px;
+footer {
+    padding: 2vh 0px;
 }
 
 footer nav ul {
