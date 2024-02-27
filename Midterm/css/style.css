@@ -53,14 +53,32 @@ header nav {
     list-style: none;
 }
 
-header a {
+header.desktop-head a {
     padding: 1vw;
     text-decoration: none;
     color:white;
     transition: all 0.2s ease-in-out;
 }
 
+.c1:hover {
+    background-color: #9c79e6;
+}
 
+.c2:hover {
+    background-color: #ff7477;
+}
+
+.c3:hover {
+    background-color: #a0e695;
+}
+
+.c4:hover {
+    background-color: #9cf6f6;
+}
+
+.c5:hover {
+    background-color: #6368E7;
+}
 
 header a:hover {
     background-color: white;
@@ -74,33 +92,17 @@ header h1 a {
     font-weight: 200;
 }
 
-header h1 a:hover {
+header.desktop-head h1 a:hover {
     background-color: white;
     color: black;
 }
 
-/* Organized using Flexbox 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items:flex-start;
-    padding: 0px 160px;
-    min-height: 400px;
+/* Mobile Header */
+.mobile-head {
+    z-index: 998;
+    size:0;
+    visibility: collapse;
 }
-
-
-.item {
-    padding:40px 0px;
-    border: 1px solid cornflowerblue;
-    background-color: rgba(0, 0, 255, 0.3);
-    width: 23%;
-    min-width:auto;
-    height: auto;
-
-}
-*/
 
 /* Create four equal columns inside a row that sits next to each other */
 .container {
@@ -162,4 +164,79 @@ footer nav ul {
     align-items: center;
     justify-content:center;
     list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-head {
+        visibility: collapse;
+    }
+
+    .mobile-head {
+        visibility: visible;
+    }
+
+    header {
+        padding: 10px 0px;
+        padding-bottom: 10px;
+        max-height: 50px;
+    }
+    header nav{
+        padding:0;
+        display: inline-block;
+        max-height: 50px;
+    }
+    header h1{
+        display:inline-block;
+    }
+    header a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .material-symbols-outlined {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 36px;
+    }
+
+    ul.works-menu {
+        display:flex;
+        flex-direction: column;
+        float: inline-start;
+        align-items: flex-end;
+        list-style: none;
+        visibility: collapse;
+        opacity: 0;
+        cursor: pointer;
+
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+    }
+
+    span:active .works-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    ul.works-menu a {
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    
+
+    /* Gallery Stuff */
+    .column {
+        flex: 49%;
+        max-width: 49%;
+        padding: 2px;
+    }
+    .item {
+        padding:2px;
+    }
+
+    .container {
+        padding: 120px 0;
+    }
 }
