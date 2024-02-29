@@ -24,7 +24,13 @@ body {
 
 .content-title {
     font-size: 3.8rem;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: rgb(250, 255, 255);
+    font-weight: 300;
 }
 /* Header and Navbar */
 
@@ -106,6 +112,15 @@ header.desktop-head h1 a:hover {
     z-index: 998;
     size:0;
     visibility: collapse;
+}
+
+/* Video Stuff */
+.big-video {
+    margin: 2rem 0;
+}
+/* Small Videos don't have any controls, are looped, autoplays, and muted*/
+.small-video {
+    margin: 1rem 0;
 }
 
 /* Create four equal columns inside a row that sits next to each other */
