@@ -54,6 +54,8 @@ h2 {
 .caption {
     font-size:1rem;
     text-align: center;
+    font-style: italic;
+    color: rgb(200, 200, 200);
 }
 
 .info {
@@ -299,9 +301,10 @@ footer nav ul {
     }
     
     header li {
+        display: inline-block;
+        width: 200px;
         padding: 12px 0;
         padding-right: 10px;
-        padding-left: 80px;
         text-decoration: none;
         color:white;
         transition: all 0.2s ease-in-out;
@@ -333,7 +336,7 @@ footer nav ul {
         opacity: 0;
         cursor: pointer;
 
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         transition: all 0.2s ease-in-out;
     }
 
