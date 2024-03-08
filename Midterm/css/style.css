@@ -11,15 +11,33 @@ body {
     background-color: black;
 }
 
-/* Fonts and Icons */
+/* Fonts and Icons and Exact Images*/
+
 .icons {
     fill: white;
     padding:0px 10px;
 }
 
+.infoIcons {
+    padding: 0;
+    width: 4%;
+}
+
+.signatureImg {
+    width: 30%;
+    position: relative;
+    left: 70%;
+}
+
 .navText {
     font-size: 1.2rem;
     font-weight: 300;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 2;
 }
 
 .content-title {
@@ -28,9 +46,32 @@ body {
 }
 
 .description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgb(250, 255, 255);
     font-weight: 300;
+}
+
+.caption {
+    font-size:1rem;
+    text-align: center;
+}
+
+.info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignLeft {
+    text-align: left;
 }
 /* Header and Navbar */
 
@@ -123,6 +164,9 @@ header.desktop-head h1 a:hover {
     margin: 1rem 0;
 }
 
+.YoutubeVideo {
+    
+}
 /* Create four equal columns inside a row that sits next to each other */
 .page-content {
     padding: 0 6vw;
@@ -140,17 +184,28 @@ header.desktop-head h1 a:hover {
     flex: 24.5%;
     max-width: 24.5%;
 }
+.three-Columns {
+    flex: 32%;
+    max-width: 32%;
+}
+.two-Columns {
+    flex: 49%;
+    max-width: 49%;
+}
+.processing-column-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .column-item img {
     padding: 6px;
-    vertical-align: middle;
     width: 100%;
     transition: all 0.1s ease-out;
 }
 .column-item img:hover {
     transform: scale(1.1);
-    background-color: rgb(224, 224, 224);
-    background-size: 10px;
-    opacity: 100;
+    padding: 10px;
+    padding-bottom: 20px;   
     cursor:zoom-in;
 }
 
@@ -196,6 +251,14 @@ header.desktop-head h1 a:hover {
     color: #fff;
     font-size: 30px;
     cursor: pointer;
+}
+
+/* Misc */
+.infoContainer {
+    width: 50%;
+    position: relative;
+    left: 25vw;
+    align-self: center;
 }
 
 /* Footer */
@@ -297,8 +360,56 @@ footer nav ul {
         padding: 2px;
     }
 
+    .three-Columns {
+        flex: 49%;
+        max-width: 49%;
+        padding: 2px;
+    }
+
+    .two-Columns {
+        flex: 100%;
+        max-width: 100%;
+        padding: 2px;
+    }
+
+    /* Overriding the original scale effect*/
+    .column-item img:hover {
+        transform: scale(1);
+        padding: 0;
+    }
+
     .item {
         padding:2px;
+    }
+    
+    .YoutubeVideo {
+        width: 100%;
+        height: auto;
+    }
+
+    .processingEmbed {
+        width: 100vw;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .processing-column-item {
+        flex: 100%;
+    }
+
+    /* */ 
+
+    .infoIcons{
+        width: 7%;
+    }
+
+    .signatureImg{
+        width: 50%;
+        left: 50%;
+    }
+    .infoContainer {
+        width: 100%;
+        left: 0;
     }
 
     /* Footer */
