@@ -169,11 +169,14 @@ header.desktop-head h1 a:hover {
 .YoutubeVideo {
     
 }
-/* Create four equal columns inside a row that sits next to each other */
+
 .page-content {
     padding: 0 6vw;
     padding-top: 120px;
 }
+
+/* Create four equal columns inside a row that sits next to each other */
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -275,6 +278,15 @@ footer nav ul {
     align-items: center;
     justify-content:center;
     list-style: none;
+}
+
+footer img {
+    transition: all 0.2s ease-in-out;
+}
+
+footer img:hover {
+    background-color: rgba(50,50,50,1);
+    color: black;
 }
 
 @media screen and (max-width: 768px) {
