@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Input Simple</title>
+    <style>
+      h1 {
+        text-transform: uppercase;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+      .purple {
+        color: purple;
+      }
+    </style>
+    <script>
+      // a function that changes the color of the H1 based on the number the user picks
+
+      // eventListener to make sure the DOM content is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Takes in the button with id="changeBtn"
+        let myBtn = document.getElementById("changeBtn");
+        // When myBtn is clicked...
+        myBtn.addEventListener("click", changeClass());
+      });
+
+      function changeClass() {
+        let userN = document.getElementById("num");
+        console.log(typeof userN.value); // the type of userN.value is a String
+        let n = parseInt(userN.value); // Converts str into int
+        console.log(typeof n);
+        // Change color class of h1.changeMe
+        var h = document.getElementById("changeMe");
+        // When n = 0,1,2,3, switch the h1 class to red, green, blue, OR purple
+        switch (n) {
+          case 0:
+            h.className = "red";
+            break;
+          case 1:
+            h.className = "green";
+            break;
+          case 2:
+            h.className = "blue";
+            break;
+          case 3:
+            h.className = "purple";
+            break;
+          default: // Default case if none of the above are true
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- id for js reference-->
+    <h1 id="changeMe">Get user input</h1>
+    <form>
+      <fieldset>
+        <legend>Pick a number between 0 and 3</legend>
+        <!-- Input that only accepts numbers 0-3 and increments by 1 (whole nums) -->
+        <input
+          type="number"
+          name="num"
+          id="num"
+          min="0"
+          max="3"
+          step="1"
+        />
+        <button type="button" id="changeBtn" class="btnClass">
+          Click to change color class of the H1
+        </button>
+      </fieldset>
+    </form>
+  </body>
+</html>

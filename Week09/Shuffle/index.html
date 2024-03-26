@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      let students = ["A", "B", "C", "D"]
+
+      function listStudents() {
+        for (var i = 0; i < students.length; i++) {
+            let li = document.createElement('LI')
+            let stu = students[i]
+            var text = document.createTextNode(stu)
+            li.appendChild(text)
+            ol.appendChild(li)
+        }
+      }
+      
+      // Sort an array alphabetically
+      function sortStudents() {
+        students.sort()
+        console.log(students)
+      }
+
+      function shuffleStudents() {
+        // Swaps a randomly selected index item with the i index item in students[]
+        for (var i = 0; i < students.length; i++) {
+          // Get a random num 0-students.length, -1 to stay in bound
+          let randomIndex = Math.floor(Math.random() * (students.length - 1))
+          // Place the item at the random index in a variable
+          let itemAtIndex = students[randomIndex]
+          // Swap the random item and the item at slot i
+          students[randomIndex] = students[i]
+          students[i] = itemAtIndex
+        }
+        console.log(students)
+      }
+
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shuffle</title>
+  </head>
+  <body>
+    <!--Activates a js function in html button-->
+    <button onclick="listStudents()">List Students</button>
+    <button onclick="sortStudents()">Sort Students</button>
+    <button onclick="shuffleStudents()">Shuffle Students</button>
+    <div id="content"></div>
+  </body>
+</html>
