@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JSON</title>
+    <script>
+      // JSON files, similar to a Python dictionary, key1: value1, key2: value2
+      let customer = {
+        firstName: 'Tony',
+        lastName: 'Pony',
+        age: 23,
+        pets: ['Dog', 'Cat', 'Iguana']
+      }
+
+      // Access the customer's first name with dot notation
+      console.log(customer.firstName)
+      console.log(customer.lastName)
+      for (var i = 0; i < customer.pets.length; i++) {
+        console.log(customer.pets[i])
+      }
+      customer.age = 45;
+      console.log(customer.age)
+    </script>
+  </head>
+  <body></body>
+</html>
