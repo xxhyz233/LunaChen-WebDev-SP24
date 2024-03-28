@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Input Simple</title>
+    <style type="text/css">
+      .container {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 300px;
+        margin: 0 auto;
+        line-height: 40px;
+        margin-top: 5%;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .well {
+        border-radius: 10px;
+        background-color: #DDD;
+        min-height: 100px;
+        padding: 20px;
+      }
+
+      .container button {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid gray;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #333;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .container button:hover {
+        background-color: #777;
+      }
+      /* [] brackets specifies parameters of a tag*/
+      input[type='number'] {
+        width: 100%;
+        padding: 10px 0;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
+
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add event listeners
+        // Declare and assign HTML elements to JS variables
+        document.getElementById('calcBtn').addEventListener('click', isPrime);
+      })
+
+      function isPrime() {
+        // Stop the page from refreshing when we click submit form
+        event.preventDefault();
+
+        let numEntry = document.getElementById('numEntry');
+        numValue = Math.round(parseFloat(numEntry.value))
+        let isPrime = true;
+        // for loop bypass the number 1 and the number itself to get the prime number
+        for (var i = 2; i < numValue; i++) {
+          if (numValue % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        
+        let p1 = document.createElement('P');
+        let t1 = document.createTextNode('Your number: ' + numValue + ', Prime = ' + isPrime);
+        p1.appendChild(t1);
+        let result = document.getElementById('primeResult');
+        result.appendChild(p1);
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prime Number Detector</h1>
+      <form>
+        <!--for= and name= needs to match on the label and input tags-->
+        <label for="numEntry">Enter the number you wish to find (must be whole number!!)</label>
+        <input type="number" name="numEntry" id="numEntry" min="1" step="1" required/>
+        <br/> 
+        <!--On submit, the page reloads and the info is stored in the url-->
+        <button type="submit" id="calcBtn">Is it a prime number?</button>
+      </form>
+      <div class="well" id="primeResult"></div>
+    </div>
+  </body>
+</html>
