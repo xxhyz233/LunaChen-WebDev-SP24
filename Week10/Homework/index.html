@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Input Simple</title>
+    <style type="text/css">
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        line-height: 40px;
+        margin-top: 5%;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      /* Font Family Classes */
+      .sansSerif {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .serif {
+        font-family: "Times New Roman", Times, serif;
+      }
+      .courier {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      /* Light and Dark Mode */
+      .lightMode {
+        background-color: #fff;
+        color: #000;
+      }
+      .darkMode {
+        background-color: #222;
+        color: #fff;
+      }
+      .darkButton {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid gray;
+        cursor: pointer;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #333;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .darkButton:hover {
+        background-color: #555;
+      }
+      .lightButton {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid gray;
+        cursor: pointer;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #222;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .lightButton:hover {
+        background-color: #777;
+      }
+      .well {
+        border-radius: 10px;
+        background-color: #ddd;
+        min-height: 20px;
+        padding: 20px;
+      }
+
+      #container button {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid gray;
+        cursor: pointer;
+        margin: 10px 0;
+        color: #fff;
+        background-color: #333;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      #container button:hover {
+        background-color: #777;
+      }
+      /* [] brackets specifies parameters of a tag*/
+      input[type="number"] {
+        width: 100%;
+        padding: 10px 0;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript" src="./scirpt.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="well" id="fontBox"></div>
+      <h1>Choose Your Font Family Below!</h1>
+      <form>
+        <label
+          ><input
+            type="radio"
+            name="fontFamily"
+            value="sansSerif"
+            checked
+          />Sans Serif</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="fontFamily"
+            value="serif"
+            checked
+          />Serif</label
+        >
+        <!--value= used in js-->
+        <label
+          ><input
+            type="radio"
+            name="fontFamily"
+            value="courier"
+            checked
+          />Courier</label
+        >
+        <br />
+        <!--On submit, the page reloads and the info is stored in the url-->
+        <button type="submit" id="applyBtn">Apply</button>
+      </form>
+    </div>
+
+    <div class="container lightMode" id="modeContainer">
+      <button class="lightButton" id="modeToggle">Switch to Night Mode</button>
+    </div>
+  </body>
+</html>
