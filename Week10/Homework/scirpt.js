@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Add event listeners
-  // Declare and assign HTML elements to JS variables
   document
     .getElementById("applyBtn")
     .addEventListener("click", function (event) {
@@ -14,28 +12,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function changeFont(event) {
-  // Stop the page from refreshing when we click submit form
+  // Prevents refresh on form submit
   event.preventDefault();
 
+  // Get all the HTML elements
   let container = document.getElementById("container");
   let fontFamily = document.getElementsByName("fontFamily");
-  let font;
   let fontBox = document.getElementById("fontBox");
-
+  let font;
+  // Remove all the existing font classes from the container element
   container.classList.remove("sansSerif");
   container.classList.remove("serif");
   container.classList.remove("courier");
-
+  // Loop through the fontFamily array
   for (var i = 0; i < fontFamily.length; i++) {
+    // Finding the checked font family item
     if (fontFamily[i].checked) {
+      // Setting the font family to our font variable and adding the class to our container
       font = fontFamily[i].value;
-      console.log(font);
       container.classList.add(font);
       break;
     }
   }
 
-  // Spit out our bill and information with createElement and createTextNode
+  // Adding the selected font family to our text box
   let p1 = document.createElement("P");
   let t1 = document.createTextNode("Your current font family is: " + font);
   p1.appendChild(t1);
@@ -45,17 +45,19 @@ function changeFont(event) {
 function changeMode(event) {
   event.preventDefault();
   let modeToggle = document.getElementById("modeToggle");
-  let container = document.getElementById("modeContainer");
-
-  if (container.classList.contains("lightMode")) {
-    container.classList.remove("lightMode");
-    container.classList.add("darkMode");
+  let modeContainer = document.getElementById("modeContainer");
+  
+  if (modeContainer.classList.contains("lightMode")) {  // Light mode
+    // Mode
+    modeContainer.classList.remove("lightMode");
+    modeContainer.classList.add("darkMode");
+    // Buttons
     modeToggle.classList.remove("lightButton");
     modeToggle.classList.add("darkButton");
     modeToggle.textContent = "Switch to Light Mode";
-  } else {
-    container.classList.remove("darkMode");
-    container.classList.add("lightMode");
+  } else {  // Dark mode
+    modeContainer.classList.remove("darkMode");
+    modeContainer.classList.add("lightMode");
     modeToggle.classList.remove("darkButton");
     modeToggle.classList.add("lightButton");
     modeToggle.textContent = "Switch to Dark Mode";
