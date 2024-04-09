@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geolocation</title>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      getLocation();
+    });
+
+    const getLocation = () => {
+      if (navigator.geolocation) {
+        // Pass both setPosition and showError as callbacks to getCurrentPosition
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+      } else {
+        alert("Your browser does not support location.");
+      }
+    };
+
+    const setPosition = (position) => {
+      console.log(position.coords.latitude);
+      console.log(position.coords.longitude);
+
+      // Correct use of template literals for variable interpolation
+      const loc = document.getElementById("location");
+      loc.innerHTML = `<p>Latitude: ${position.coords.latitude} <br/> Longitude: ${position.coords.longitude}</p>`;
+    };
+
+    const showError = (error) => {
+      const loc = document.getElementById("location"); // Ensure loc is accessible
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          loc.innerHTML = "User denied the request for Geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          loc.innerHTML = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          loc.innerHTML = "The request to get user location timed out.";
+          break;
+        default:
+          loc.innerHTML = "An unknown error occurred.";
+          break;
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="location">
+    <p>Currently searching for location...</p>
+  </div>
+</body>
+</html>
