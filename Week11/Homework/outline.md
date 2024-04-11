@@ -7,6 +7,7 @@ For the Final I wish to <b>continue with my Midterm ideas </b>and refine / add n
 3. Modify the embeded Processing works so they don't lag the INTERACTIVE page 
 4. Figure out the script of [this header](https://refikanadol.com/works/machine-hallucinations-nature-dreams/) where it smoothly fades out when I scroll down and fades in when I scroll up
 5. Add a script that allows HTML elements to [fade in and fade out](https://verse-n.com/) whenever I enter a new page
+6. Add a loading animation for large media files
 
 ## Aesthetically I wish to:
 1. Adjust the layout of the film page with info on the right, about + process on the left, and title on the top aligned to the center
