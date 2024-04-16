@@ -29,10 +29,6 @@ body {
     left: 70%;
 }
 
-.navText {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
 
 h2 {
     font-weight: 200;
@@ -48,7 +44,7 @@ h2 {
 .description {
     font-size: 1rem;
     color: rgb(250, 255, 255);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .caption {
@@ -107,6 +103,7 @@ header nav {
 
 header a {
     padding: 24px 40px;
+    font-weight: 300;
     text-decoration: none;
     color:white;
     transition: all 0.2s ease-in-out;
