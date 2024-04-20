@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello GSAP Tweens</title>
+
+    <style type="text/css" media="screen"></style>
+  </head>
+  <body>
+    <img src="./img/soccer-ball.png" id="sb" />
+    <!-- 5 basketballs to bounce -->
+    <img src="./img/basket-ball.png" class="bball" />
+    <img src="./img/basket-ball.png" class="bball" />
+    <img src="./img/basket-ball.png" class="bball" />
+    <img src="./img/basket-ball.png" class="bball" />
+    <img src="./img/basket-ball.png" class="bball" />
+
+    <!-- Load GSAP core library at the bottom of our body tag -->
+    <!--
+      Older free without subscription versions
+      https://github.com/greensock/GSAP
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Our Script using GSAP Library Functions -->
+    <script type="text/javascript">
+      const sb = document.getElementById('sb');
+      // Animation from GSAP, the 3rd parameter are animated properties, basically CSS
+      gsap.to(sb, 2, {
+        x: 800,
+        y: 500,
+        rotation: 720,
+        scale: 0.5,
+        delay: 0.5,
+        ease: "elastic.out(1,0.3)",
+      });
+      gsap.to('.bball', 1, {
+        y: 500,
+        rotation: 360,
+        delay: 1,
+        ease:"bounce.out()",
+        // Creates animation stagger between all 5 bball elements
+        stagger: {
+          each: 0.5,
+        },
+      });
+      // Callback function with GSAP
+      const imDone = () => {
+        
+      }
+    </script>
+  </body>
+</html>
