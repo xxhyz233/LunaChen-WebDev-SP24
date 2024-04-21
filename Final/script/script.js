@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       opacity: 1,
       delay: 1,
-      duration: 2.4,
-      stagger: 0.8,
+      duration: 2,
+      stagger: 0.6,
     }
   );
 });

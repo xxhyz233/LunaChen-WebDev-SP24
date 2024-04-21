@@ -33,31 +33,36 @@ body {
     height: 68px;
 }
 
-
 h2 {
     font-weight: 200;
     font-size: 2rem;
     line-height: 2;
 }
-
 .content-title {
     font-size: 3.8rem;
     font-weight: 300;
 }
-
 .description {
     font-size: 1rem;
     color: rgb(250, 255, 255);
     font-weight: 400;
 }
-
+.twoPanelContainer {
+    display: flex;      /* Enables flexbox layout */
+}
+.left-panel, .right-panel {
+    flex: 1;            /* Each child will take up equal width */
+    padding: 20px;
+}
+.right-panel {
+    text-align: end;
+}
 .caption {
     font-size:1rem;
     text-align: center;
     font-style: italic;
     color: rgb(200, 200, 200);
 }
-
 .info {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
@@ -67,11 +72,9 @@ h2 {
 .alignCenter {
     text-align: center;
 }
-
 .alignRight {
     text-align: right;
 }
-
 .alignLeft {
     text-align: left;
 }
@@ -159,6 +162,17 @@ header.desktop-head h1 a:hover {
 }
 
 /* Video Stuff */
+.video-background {
+    filter: blur(16px) brightness(15%);
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -10; /* Keeps the video behind other content */
+}
+
 .big-video {
     margin: 2rem 0;
 }
