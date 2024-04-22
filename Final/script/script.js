@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     loadAni,
     {
       opacity: 0,
-      ease: "power2.out",
     },
     {
       opacity: 1,
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     slowLoadAni,
     {
       opacity: 0,
-      ease: "power2.out",
     },
     {
       opacity: 1,
