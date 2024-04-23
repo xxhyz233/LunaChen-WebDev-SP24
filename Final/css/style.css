@@ -116,6 +116,22 @@ header a {
     transition: all 0.2s ease-in-out;
 }
 
+header a:hover {
+    background-color: white;
+    color: black;
+}
+
+.noBackground {
+    padding: 0;
+    color: rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.noBackground:hover {
+    background:none;
+    transform: scale(1.1);
+}
+
 .c1:hover {
     background-color: #9c79e6;
 }
@@ -136,10 +152,7 @@ header a {
     background-color: #6368E7;
 }
 
-header a:hover {
-    background-color: white;
-    color: black;
-}
+
 
 header h1 a {
     align-items: start;
