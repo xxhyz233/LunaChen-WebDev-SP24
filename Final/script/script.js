@@ -12,42 +12,41 @@ if (!fullscreenView || (!fullscreenImage && !fullscreenVideo) || !closeBtn) {
 
 columnItem.forEach((item) => {
   item.addEventListener("click", () => {
+    // Check if the columnItem contains a video or image
     const hasVideo = item.querySelector("video") !== null;
     const hasImg = item.querySelector("img") !== null;
-    // Don't Fullscreen .big-video
     const hasBigVideo = item.querySelector(".big-video") !== null;
 
     // Clear sources to avoid displaying old content
     fullscreenImage.style.display = 'none';
     fullscreenVideo.style.display = 'none';
-    
+    // Display the corresponding video OR image element
     if (hasVideo) {
-
       const vidSrc = item.querySelector("video").getElementsByTagName("source")[0].src;
       fullscreenVideo.src = vidSrc;
-      fullscreenVideo.load();  // Ensure the video loads the new source
+      fullscreenVideo.load();
       fullscreenVideo.muted = true;
       fullscreenVideo.play();
-      fullscreenVideo.style.display = 'block'; // Ensure video is visible
-      fullscreenImage.src = ''; // Clear image source
+      fullscreenVideo.style.display = 'block';
+      fullscreenImage.src = '';
     }
     else if (hasImg) {
       const imgSrc = item.querySelector("img").src;
       fullscreenImage.src = imgSrc;
-      fullscreenImage.style.display = 'block'; // Ensure image is visible
-      fullscreenVideo.src = ''; // Clear video source
+      fullscreenImage.style.display = 'block';
+      fullscreenVideo.src = '';
     }
+    // Don't fullscreen .big-video
     if (hasBigVideo) {
       fullscreenView.classList.remove("show");
     }
     else {
       fullscreenView.classList.add("show");
     }
-    
-    gsap.fromTo(
+    // Fade-in animation
+    gsap.from(
       hasVideo ? fullscreenVideo : fullscreenImage,
-      { opacity: 0, ease: "none" },
-      { opacity: 1, duration: 0.2 }
+      { opacity: 0, duration: 0.2, ease: "none" }
     );
   });
 });

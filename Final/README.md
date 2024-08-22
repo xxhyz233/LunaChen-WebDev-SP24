@@ -1,2 +1,3 @@
-My documentation and presentation are all in this Notion page:
-https://walnut-road-251.notion.site/Midterm-Presentation-Luna-Chen-WebDevSP24-31c36a1abfe346f49d49ebd60344824a?pvs=4
+[My documentation & Presentation](https://walnut-road-251.notion.site/Final-Documentation-821a1ea8cbcb41468e5da7a13eb4bebf?pvs=4)
+
+[Live Hosted Site](https://xxhyz.net)
