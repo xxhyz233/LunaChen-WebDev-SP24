@@ -52,7 +52,6 @@ h2 {
 }
 .left-panel, .right-panel {
     flex: 1;            /* Each child will take up equal width */
-    padding: 20px;
 }
 .right-panel {
     text-align: end;
