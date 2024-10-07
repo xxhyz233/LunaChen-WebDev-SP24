@@ -126,4 +126,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
       stagger: 0.6,
     }
   );
+
+  // Preload Transition
+  const preloader = document.getElementById('preloader');
+  const mainContent = document.getElementById('main-content');
+
+  // Wait for the page to load, then fade-out the preloader
+  window.addEventListener('load', function() {
+        preloader.classList.add('fade-out'); // Fade out the black screen
+        mainContent.classList.add('fade-in'); // Fade in the main content
+    });
+
+  // Fade-out effect before navigating to a new page  
+  const links = document.querySelectorAll('a');
+  links.forEach(link => {
+      link.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent immediate navigation
+
+            // Trigger the fade-out
+          preloader.style.opacity = '1'; // Show the black screen
+          mainContent.style.opacity = '0'; // Hide the content
+
+            // Wait for the transition to complete, then navigate
+          setTimeout(() => {
+              window.location.href = this.href; // Redirect to the new page
+          }, 1000); // Wait for 1 second (matching the CSS transition duration)
+        });
+    });
 });
